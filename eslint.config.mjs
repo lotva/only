@@ -13,6 +13,8 @@ const eslintConfig = defineConfig([
 
 	{
 		rules: {
+			'unicorn/filename-case': 'off',
+			'unicorn/no-keyword-prefix': 'off',
 			'unicorn/no-null': 'off',
 			'unicorn/prevent-abbreviations': [
 				'warn',

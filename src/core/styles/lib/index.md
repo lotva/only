@@ -6,12 +6,7 @@
 
 ```html
 <section aria-labeledby="about-heading">
-	<h2
-		id="about-heading"
-		className="visuallyHidden"
-	>
-		О нас
-	</h2>
+	<h2 id="about-heading" className="visuallyHidden">О нас</h2>
 </section>
 ```
 
@@ -27,18 +22,10 @@
 
 ```html
 <li class="card clickableArea">
-	<img
-		src="images/1.jpeg"
-		alt=""
-	/>
+	<img src="images/1.jpeg" alt="" />
 	<div class="text">
 		<h2>
-			<a
-				class="clickableAreaLink"
-				href="#card-link"
-			>
-				Another card instance
-			</a>
+			<a class="clickableAreaLink" href="#card-link"> Another card instance </a>
 		</h2>
 		<p>
 			Cupidatat tempor sint mollit in tempor ut fugiat excepteur laborum labore.

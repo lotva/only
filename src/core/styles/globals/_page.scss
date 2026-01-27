@@ -4,14 +4,14 @@ html {
 	scrollbar-gutter: stable;
 
 	font-family: fonts.$font-text;
-	font-size: 17px;
 	font-weight: normal;
-	line-height: 25px;
+	line-height: 1.45;
 	color: var(--color__text);
 
 	background-color: var(--color__background);
 }
 
 body {
+	max-width: 1440px;
 	margin: 0 auto;
 }

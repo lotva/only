@@ -1,9 +1,18 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 
-import '@/shared/ui/styles/index.scss'
+import { ReactTempus } from 'tempus/react'
+
+import { GsapRuntime } from '@/core/layout/gsap'
+import { Lenis } from '@/core/layout/lenis'
+import '@/core/styles/index.scss'
 
 export const metadata: Metadata = {
 	title: 'Исторические даты. Демо — GSAP',
+}
+
+export const viewport: Viewport = {
+	colorScheme: 'normal',
+	themeColor: '#5d5fef',
 }
 
 export default function RootLayout({
@@ -12,8 +21,15 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="ru">
-			<body>{children}</body>
+		<html dir="ltr" lang="ru">
+			<body>
+				<GsapRuntime />
+
+				{children}
+
+				<Lenis options={{}} root />
+				<ReactTempus />
+			</body>
 		</html>
 	)
 }
