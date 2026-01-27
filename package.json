@@ -1,25 +1,40 @@
 {
-  "name": "only",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.1.5",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.5",
-    "typescript": "^5"
-  }
+	"name": "only",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"check:formatting": "prettier . --check",
+		"check:styles": "stylelint \"src/**/*.{scss,css}\"",
+		"check:scripts": "eslint"
+	},
+	"dependencies": {
+		"next": "16.1.5",
+		"react": "19.2.3",
+		"react-dom": "19.2.3"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^20.3.1",
+		"@commitlint/config-conventional": "^20.3.1",
+		"@commitlint/types": "^20.3.1",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"babel-plugin-react-compiler": "1.0.0",
+		"eslint": "^9.39.2",
+		"eslint-config-next": "16.1.5",
+		"eslint-plugin-perfectionist": "^5.4.0",
+		"eslint-plugin-unicorn": "^62.0.0",
+		"lefthook": "^2.0.16",
+		"postcss-scss": "^4.0.9",
+		"prettier": "3.8.1",
+		"stylelint": "^17.0.0",
+		"stylelint-config-clean-order": "^8.0.0",
+		"stylelint-config-recommended": "^18.0.0",
+		"stylelint-config-recommended-scss": "^17.0.0",
+		"stylelint-config-standard-scss": "^17.0.0",
+		"typescript": "^5"
+	}
 }

@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"joshbolduc.commitlint",
+		"stylelint.vscode-stylelint",
+		"dbaeumer.vscode-eslint",
+		"EditorConfig.EditorConfig",
+		"esbenp.prettier-vscode",
+		"deque-systems.vscode-axe-linter"
+	]
+}

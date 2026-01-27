@@ -1,18 +1,31 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
+import perfectionist from 'eslint-plugin-perfectionist'
+import unicorn from 'eslint-plugin-unicorn'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
 const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
-  // Override default ignores of eslint-config-next.
-  globalIgnores([
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
-]);
+	...nextVitals,
+	...nextTs,
 
-export default eslintConfig;
+	perfectionist.configs['recommended-natural'],
+	unicorn.configs['all'],
+
+	{
+		rules: {
+			'unicorn/no-null': 'off',
+			'unicorn/prevent-abbreviations': [
+				'warn',
+				{
+					replacements: {
+						props: false,
+					},
+				},
+			],
+		},
+	},
+
+	globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
+])
+
+export default eslintConfig
