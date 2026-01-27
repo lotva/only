@@ -6,19 +6,10 @@ import 'lenis/dist/lenis.css'
 import type { LenisRef, LenisProps as ReactLenisProps } from 'lenis/react'
 
 import { ReactLenis } from 'lenis/react'
-import dynamic from 'next/dynamic'
 import { useRef } from 'react'
 import { useTempus } from 'tempus/react'
 
-const LenisScrollTriggerSync = dynamic(
-	() =>
-		import('./scroll-trigger').then(
-			(module_) => module_.LenisScrollTriggerSync,
-		),
-	{
-		ssr: false,
-	},
-)
+import { LenisScrollTriggerSync } from './scroll-trigger'
 
 interface LenisProps extends Omit<ReactLenisProps, 'ref'> {
 	options: LenisOptions
@@ -47,9 +38,6 @@ export function Lenis({
 				autoRaf: false,
 				autoToggle: true,
 				lerp: options?.lerp ?? 0.125,
-				prevent: (node: Element | null) =>
-					node?.nodeName === 'VERCEL-LIVE-FEEDBACK' ||
-					node?.id === 'theatrejs-studio-root',
 			}}
 			ref={lenisReference}
 			root={root}

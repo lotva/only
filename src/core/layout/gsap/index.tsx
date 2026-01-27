@@ -2,13 +2,15 @@
 
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTempus } from 'tempus/react'
 
 if (globalThis.window !== undefined) {
 	gsap.defaults({ ease: 'none' })
-	gsap.registerPlugin(useGSAP)
 	gsap.ticker.lagSmoothing(0)
 	gsap.ticker.remove(gsap.updateRoot)
+	gsap.registerPlugin(ScrollTrigger)
+	gsap.registerPlugin(useGSAP)
 }
 
 /**

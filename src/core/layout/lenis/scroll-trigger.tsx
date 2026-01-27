@@ -1,11 +1,6 @@
-import gsap from 'gsap'
 import { ScrollTrigger as GSAPScrollTrigger } from 'gsap/all'
 import { useLenis } from 'lenis/react'
 import { useEffect, useEffectEvent } from 'react'
-
-if (globalThis.window !== undefined) {
-	gsap.registerPlugin(GSAPScrollTrigger)
-}
 
 /**
  * Syncs GSAP ScrollTrigger with Lenis scroll position.
