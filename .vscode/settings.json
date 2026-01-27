@@ -1,11 +1,12 @@
 {
-	"editor.codeActionsOnSave": {
-		"source.fixAll": "explicit",
-		"source.organizeImports": "explicit"
-	},
-
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit",
+		"source.organizeImports": "explicit",
+		"source.fixAll.prettier": "never"
+	},
 
 	"editor.tabSize": 2
 }

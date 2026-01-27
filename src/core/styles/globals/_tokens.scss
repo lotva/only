@@ -1,10 +1,12 @@
 :root {
-	--color__background: rgb(229 229 229);
+	--color__background: rgb(244 245 249);
 	--color__text: rgb(66 86 122);
 	--color__accent: rgb(93 95 239);
 	--color__accent--secondary: rgb(239 93 168);
 	--color__border: rgb(66 86 122 / 20%);
 	--color__border--faded: rgb(66 86 122 / 10%);
 	--color__surface: rgb(255 255 255);
+	--color__surface--hover: rgb(248 249 254);
+	--color__surface--active: rgb(240 241 245);
 	--shadow__control: 0px 0px 15px rgb(56 119 238 / 10%);
 }

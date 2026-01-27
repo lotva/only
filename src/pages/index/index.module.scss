@@ -1,0 +1,6 @@
+.page {
+	--page-inline-padding: clamp(20px, 5vw, 78px);
+
+	padding-block: 170px;
+	padding-inline: var(--page-inline-padding);
+}

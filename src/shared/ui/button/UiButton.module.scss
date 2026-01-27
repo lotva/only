@@ -1,0 +1,47 @@
+.button {
+	background-color: var(--background-color);
+	transition:
+		background-color 0.3s ease,
+		box-shadow 200ms cubic-bezier(0.22, 0.61, 0.36, 1);
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background-color: var(--background-color--hover);
+		}
+	}
+
+	&:hover,
+	&:focus-visible {
+		transition: none;
+	}
+
+	&:focus-visible {
+		box-shadow: 0 0 0 0.15em var(--color__accent);
+	}
+
+	&:active {
+		background-color: var(--background-color--active);
+	}
+
+	&:disabled,
+	&[aria-busy='true'] {
+		cursor: default;
+		background-color: var(--background-color--disabled, rgb(211 213 218));
+	}
+
+	&._primary {
+		--background-color: var(--color__surface);
+		--background-color--hover: var(--color__surface--hover);
+		--background-color--active: var(--color__surface--active);
+
+		color: var(--color__accent);
+	}
+
+	&._default {
+		--background-color: transparent;
+		--background-color--hover: var(--color__surface--hover);
+		--background-color--active: var(--color__surface--active);
+
+		color: var(--color__text);
+	}
+}
