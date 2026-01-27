@@ -22,6 +22,16 @@ export default function RootLayout({
 }>) {
 	return (
 		<html dir="ltr" lang="ru">
+			<head>
+				<noscript>
+					<style>
+						{`
+              [data-animate] { visibility: visible; }
+            `}
+					</style>
+				</noscript>
+			</head>
+
 			<body>
 				<ReactTempus />
 				<GsapRuntime />
