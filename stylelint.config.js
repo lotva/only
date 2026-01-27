@@ -6,6 +6,8 @@ const config = {
 	],
 
 	rules: {
+		'custom-property-pattern': null,
+
 		'declaration-property-value-no-unknown': null,
 
 		'no-descending-specificity': [true, { severity: 'warning' }],
@@ -27,7 +29,6 @@ const config = {
 				except: ['first-nested'],
 			},
 		],
-
 		'selector-class-pattern': null,
 	},
 }

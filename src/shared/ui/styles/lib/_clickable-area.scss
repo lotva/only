@@ -1,0 +1,14 @@
+.clickableArea {
+	position: relative;
+}
+
+.clickableAreaLink {
+	padding: 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		inset: 0;
+	}
+}
