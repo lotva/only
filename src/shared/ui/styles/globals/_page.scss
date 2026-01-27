@@ -1,0 +1,17 @@
+@use '_fonts' as fonts;
+
+html {
+	scrollbar-gutter: stable;
+
+	font-family: fonts.$font-text;
+	font-size: 17px;
+	font-weight: normal;
+	line-height: 25px;
+	color: var(--color__text);
+
+	background-color: var(--color__background);
+}
+
+body {
+	margin: 0 auto;
+}

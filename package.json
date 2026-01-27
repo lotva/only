@@ -10,6 +10,10 @@
 		"check:styles": "stylelint \"src/**/*.{scss,css}\"",
 		"check:scripts": "eslint"
 	},
+	"engines": {
+		"node": ">=22.0.0",
+		"pnpm": ">=10.10.0"
+	},
 	"dependencies": {
 		"next": "16.1.5",
 		"react": "19.2.3",
@@ -30,6 +34,7 @@
 		"lefthook": "^2.0.16",
 		"postcss-scss": "^4.0.9",
 		"prettier": "3.8.1",
+		"sass": "^1.97.3",
 		"stylelint": "^17.0.0",
 		"stylelint-config-clean-order": "^8.0.0",
 		"stylelint-config-recommended": "^18.0.0",
