@@ -1,0 +1,42 @@
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/all'
+import { RefObject } from 'react'
+
+import { fadeUpTimeline } from './fadeUp.timeline'
+
+type UseFadeUpOnViewOptions = {
+	once?: boolean
+	selector?: string
+	start?: string
+}
+
+export function useFadeUpOnView(
+	containerRef: RefObject<HTMLElement | null>,
+	{
+		once = true,
+		selector = '[data-animate]',
+		start = 'top 80%',
+	}: UseFadeUpOnViewOptions = {},
+) {
+	useGSAP(
+		() => {
+			if (!containerRef.current) return
+
+			const elements = [
+				...containerRef.current.querySelectorAll<HTMLElement>(selector),
+			]
+
+			if (elements.length === 0) return
+
+			const tl = fadeUpTimeline(elements)
+
+			ScrollTrigger.create({
+				animation: tl,
+				once,
+				start,
+				trigger: containerRef.current,
+			})
+		},
+		{ scope: containerRef },
+	)
+}

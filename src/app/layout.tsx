@@ -23,12 +23,12 @@ export default function RootLayout({
 	return (
 		<html dir="ltr" lang="ru">
 			<body>
+				<ReactTempus />
 				<GsapRuntime />
 
 				{children}
 
-				<Lenis options={{}} root />
-				<ReactTempus />
+				<Lenis options={{}} root syncScrollTrigger />
 			</body>
 		</html>
 	)

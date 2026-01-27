@@ -21,6 +21,7 @@ const eslintConfig = defineConfig([
 				{
 					replacements: {
 						props: false,
+						ref: false,
 					},
 				},
 			],
