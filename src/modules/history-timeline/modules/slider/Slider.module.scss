@@ -3,14 +3,25 @@
 	flex-direction: column;
 }
 
-.navigator {
+.navigation {
+	display: flex;
+	column-gap: 38px;
+	align-items: center;
 	order: 1;
+
+	width: fit-content;
 	margin-top: 78px;
 
 	@media (width >= 768px) {
 		order: -1;
 		margin-top: -48px;
 	}
+}
+
+.pagination {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .scroller {
