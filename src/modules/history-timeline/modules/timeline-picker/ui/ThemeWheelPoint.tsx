@@ -19,6 +19,7 @@ export function ThemeWheelPoint({
 			className={styles.point}
 			data-label={label}
 			onClick={onSelect}
+			tabIndex={active ? -1 : 0}
 			type="button"
 		>
 			<span className={styles.text}>{index + 1}</span>
