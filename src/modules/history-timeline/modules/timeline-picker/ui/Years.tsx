@@ -50,9 +50,9 @@ export function Years() {
 
 	return (
 		<h2 aria-live="polite" className={styles.years}>
-			<span className="visuallyHidden">Показан отрезок времени от:</span>
+			<span className="visuallyHidden">Показан отрезок времени от </span>
 			<span className={styles.from}>{displayFrom}</span>
-			<span className="visuallyHidden">до</span>
+			<span className="visuallyHidden"> до </span>
 			<span className={styles.to}>{displayTo}</span>
 		</h2>
 	)

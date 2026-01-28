@@ -16,6 +16,7 @@ export function ThemeWheelPoint({
 	return (
 		<button
 			aria-current={active ? 'step' : undefined}
+			aria-label={`Переключиться на ${index + 1}-й временной отрезок`}
 			aria-pressed={active}
 			className={styles.point}
 			onClick={onSelect}
