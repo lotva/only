@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+[![Prettier](https://github.com/lotva/only/actions/workflows/check-formatting.yaml/badge.svg)](https://github.com/lotva/only/actions/workflows/check-formatting.yaml) [![Stylelint](https://github.com/lotva/only/actions/workflows/check-styles.yaml/badge.svg)](https://github.com/lotva/only/actions/workflows/check-styles.yaml) [![ESLint](https://github.com/lotva/only/actions/workflows/check-scripts.yaml/badge.svg)](https://github.com/lotva/only/actions/workflows/check-scripts.yaml) [![TSC](https://github.com/lotva/only/actions/workflows/check-types.yaml/badge.svg)](https://github.com/lotva/only/actions/workflows/check-types.yaml)
 
-## Getting Started
+## Демо производительного приложения с анимацией на GSAP, ScrollTrigger и Lenis
 
-First, run the development server:
+Сайт развёрнут на Верселе: https://only-ecru.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Что сделано: SSG на Next.js, анимация появления при попадании во вьюпорт, плавный скролл Lenis, оптимизация `requestAnimationFrame` (все используемые rAF синхронизованы), линтинг кода при CI в экшенах, адаптив на флюидной типографике.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Код готов к продакшену. Приложение рендерится в константных 60 кадрах, ререндеры минимизированы с помощью React Compiler.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Как работать с проектом
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Пакетный менеджер — PNPM ≥10.10.0. Вот команды для разработки:
 
-## Learn More
+1. Установить зависимости: `pnpm install`.
+2. Запустить дев-сервер: `pnpm run dev`.
+3. Собрать приложение: `pnpm run build`.
+4. Запустить сервер: `pnpm run start`.
 
-To learn more about Next.js, take a look at the following resources:
+https://github.com/user-attachments/assets/28cf9dd6-9e10-4f6d-88ef-99178705118e
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Файловая структура
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Архитектурная методология — FEOD.** Код разделён на директории `app`, `core`, `modules`, `views` и `shared`. Проект состоит из одного модуля `HistoryTimeline`, имеющего подмодули `Wheel` и `Slider`.
 
-## Deploy on Vercel
+Что находится в каждой директории:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app`: привычный рутинг Некста — корневой рут и лэйаут.
+- `core`: глобальные стили и компоненты рантаймов GSAP, Tempus и Lenis.
+- `modules`: состоит из одного модуля `HistoryTimeline`, имеющего подмодули `Wheel` и `Slider`. FEOD — фрактальная методология, в ней модули могут иметь неограниченное число подмодулей, повторяя их структуру. Модули дробятся на слайсы, напоминающие FSD: `ui`, `lib`, `config`.
+- `views`: корневая страница.
+- `shared`: базовые компоненты в `ui`, вспомогательный код в `lib`, анимации и визуальные преображения на GSAP — в `effects`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+См. «[Как FEOD помогает упорядочить архитектуру фронтенд-приложений](https://habr.com/ru/companies/sportmaster_lab/articles/972410/)»
+
+## Стек
+
+| Категория | Технологии                                                   |
+| --------- | ------------------------------------------------------------ |
+| Фреймворк | Next.js 16, React 19.2, TypeScript                           |
+| Стили     | SCSS, CSS Modules                                            |
+| Анимации  | GSAP, Lenis, Tempus                                          |
+| DX        | Prettier, Stylelint, ESLint, Commitlint, Lefthook, Turbopack |
