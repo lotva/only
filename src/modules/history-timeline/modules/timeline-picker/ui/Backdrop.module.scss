@@ -1,5 +1,10 @@
 .backdrop {
 	pointer-events: none;
+	display: none;
+
+	@media (width >= 768px) {
+		display: block;
+	}
 
 	&::before,
 	&::after {
