@@ -11,7 +11,7 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 type TSize = 'custom' | 'large' | 'medium' | 'small'
-type TTheme = 'default' | 'primary'
+type TTheme = 'custom' | 'default' | 'primary'
 
 export const UiButton = ({
 	children,

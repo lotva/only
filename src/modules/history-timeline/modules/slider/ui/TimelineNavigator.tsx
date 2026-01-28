@@ -34,7 +34,11 @@ export function TimelineNavigator({ className }: { className?: string }) {
 			aria-label="Навигация по отрезкам времени"
 			className={cn(styles.navigator, className)}
 		>
-			<span aria-live="polite" className={styles.counter}>
+			<span
+				aria-label={`Отрезок ${currentIndex + 1} из ${timelines.length}`}
+				aria-live="polite"
+				className={styles.counter}
+			>
 				{String(currentIndex + 1).padStart(2, '0')}/
 				{String(timelines.length).padStart(2, '0')}
 			</span>
