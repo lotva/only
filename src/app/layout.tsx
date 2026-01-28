@@ -29,6 +29,22 @@ export default function RootLayout({
             `}
 					</style>
 				</noscript>
+
+				<link
+					as="font"
+					crossOrigin="anonymous"
+					href="/fonts/pt-sans-regular.woff2"
+					rel="preload"
+					type="font/woff2"
+				/>
+
+				<link
+					as="font"
+					crossOrigin="anonymous"
+					href="/fonts/pt-sans-bold.woff2"
+					rel="preload"
+					type="font/woff2"
+				/>
 			</head>
 
 			<body>
