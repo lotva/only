@@ -1,0 +1,10 @@
+.root {
+	display: grid;
+	grid-template-areas: 'stack';
+	align-items: center;
+	justify-content: center;
+
+	> * {
+		grid-area: stack;
+	}
+}

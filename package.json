@@ -8,7 +8,8 @@
 		"start": "next start",
 		"check:formatting": "prettier . --check",
 		"check:styles": "stylelint \"src/**/*.{scss,css}\"",
-		"check:scripts": "eslint"
+		"check:scripts": "eslint",
+		"check:types": "tsc --noEmit --incremental false"
 	},
 	"engines": {
 		"node": ">=22.0.0",

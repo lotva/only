@@ -1,0 +1,20 @@
+.years {
+	user-select: none;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 1ch;
+
+	font-size: 10rem;
+	line-height: 8rem;
+	letter-spacing: -0.02em;
+}
+
+.from {
+	color: var(--color__accent);
+}
+
+.to {
+	margin-left: -0.135em; // Compensate horizontal metric shift
+	color: var(--color__accent--secondary);
+}

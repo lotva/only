@@ -1,0 +1,23 @@
+.wheel {
+	--wheel-rotation: 0deg;
+
+	user-select: none;
+
+	position: relative;
+	rotate: var(--wheel-rotation);
+
+	display: grid;
+	grid-template-areas: 'stack';
+	align-content: center;
+
+	aspect-ratio: 1;
+	width: min(52%, 530px);
+	height: auto;
+	margin: 0 auto;
+	border: 1px solid var(--color__border);
+	border-radius: 50%;
+}
+
+.item {
+	grid-area: stack;
+}

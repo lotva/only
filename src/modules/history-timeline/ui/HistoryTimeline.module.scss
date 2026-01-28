@@ -1,0 +1,27 @@
+.root {
+	--container-inline-padding: clamp(
+		var(--page-inline-padding) - 40px,
+		var(--page-inline-padding) - 40px + 2vw,
+		var(--page-inline-padding)
+	);
+
+	position: relative;
+
+	overflow: clip;
+
+	margin-inline: calc(-1 * var(--container-inline-padding));
+	padding-block: 170px;
+	padding-inline: var(--container-inline-padding);
+
+	@media (width >= 1300px) {
+		box-shadow: 0 0 0 1px var(--color__border--faded);
+	}
+
+	&._alternate {
+		padding-block-start: 30px;
+	}
+}
+
+.picker {
+	margin-block-start: -72px;
+}

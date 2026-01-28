@@ -9,7 +9,7 @@ type FadeUpOptions = {
 
 export function fadeUp(
 	element: HTMLElement,
-	{ delay = 0, duration = 0.5, ease = 'power2.out', y = 4 }: FadeUpOptions = {},
+	{ delay = 0, duration = 0.8, ease = 'power2.out', y = 4 }: FadeUpOptions = {},
 ) {
 	return gsap.fromTo(
 		element,

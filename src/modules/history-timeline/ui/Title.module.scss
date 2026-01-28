@@ -1,6 +1,6 @@
 .title {
 	position: relative;
-	max-width: 15ch;
+	max-width: 11ch;
 	font-size: 1.4rem;
 	line-height: 1.2;
 
@@ -12,14 +12,7 @@
 		content: '';
 
 		position: absolute;
-		left: calc(
-			-1 *
-				clamp(
-					var(--page-inline-padding) - 40px,
-					var(--page-inline-padding) - 40px + 2vw,
-					var(--page-inline-padding)
-				)
-		);
+		left: calc(-1 * var(--container-inline-padding) - 1px);
 
 		display: none;
 
