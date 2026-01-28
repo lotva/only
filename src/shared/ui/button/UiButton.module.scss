@@ -31,8 +31,8 @@
 
 	&._primary {
 		--background-color: var(--color__surface);
-		--background-color--hover: var(--color__surface--hover);
-		--background-color--active: var(--color__surface--active);
+		--background-color--hover: var(--color__surface);
+		--background-color--active: var(--color__surface--hover);
 
 		color: var(--color__accent);
 	}

@@ -3,7 +3,7 @@
 html {
 	scrollbar-gutter: stable;
 
-	font-family: fonts.$font-text;
+	font-family: var(--font__text);
 	font-weight: normal;
 	line-height: 1.45;
 	color: var(--color__text);
