@@ -1,7 +1,7 @@
 'use client'
 
 import gsap from 'gsap'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useEffectEvent, useMemo, useRef } from 'react'
 
 import { useHistoryTimeline } from '@/modules/history-timeline/lib/context'
 
@@ -10,6 +10,8 @@ import styles from './ThemeWheel.module.scss'
 import { ThemeWheelPoint } from './ThemeWheelPoint'
 
 const TARGET_ANGLE = 30
+const ANIMATION_DURATION = 0.9
+const ANIMATION_EASE = 'power3.inOut'
 
 export function ThemeWheel() {
 	const { activeTimeline, setActiveTimelineId, timelines } =
@@ -20,11 +22,9 @@ export function ThemeWheel() {
 	const logicalRadRotation = useRef(0)
 	const visualDegRotation = useRef(0)
 
-	const [activeIndex, setActiveIndex] = useState(
-		Math.max(
-			0,
-			timelines.findIndex((t) => t.id === activeTimeline?.id),
-		),
+	const activeIndex = Math.max(
+		0,
+		timelines.findIndex((t) => t.id === activeTimeline?.id),
 	)
 
 	const pointAnglesDeg = useMemo(() => {
@@ -40,116 +40,72 @@ export function ThemeWheel() {
 	const pointAngleFromTopRad = (index: number) =>
 		degToRad(pointAnglesDeg[index % pointAnglesDeg.length] ?? 0)
 
+	const getTargetRotation = (index: number) => {
+		const pointRad = pointAngleFromTopRad(index)
+		const targetScreenRad = degToRad(TARGET_ANGLE)
+		return targetScreenRad - pointRad
+	}
+
+	const animateToTarget = useEffectEvent((targetIndex: number) => {
+		if (!wheelRef.current || timelinesCount === 0) return
+
+		const targetRotation = getTargetRotation(targetIndex)
+		const currentLogical = logicalRadRotation.current
+		const delta = normalizeRad(targetRotation - currentLogical)
+		const nextRotation = currentLogical + delta
+
+		logicalRadRotation.current = nextRotation
+
+		const startDeg = visualDegRotation.current
+		const endDeg = radToDeg(nextRotation)
+
+		const proxy = { rotation: startDeg }
+		gsap.killTweensOf(proxy)
+
+		gsap.to(proxy, {
+			duration: ANIMATION_DURATION,
+			ease: ANIMATION_EASE,
+			onComplete: () => {
+				visualDegRotation.current = endDeg
+				wheelRef.current?.style.setProperty('--wheel-rotation', `${endDeg}deg`)
+			},
+			onUpdate: () => {
+				const deg = proxy.rotation
+				visualDegRotation.current = deg
+				wheelRef.current?.style.setProperty('--wheel-rotation', `${deg}deg`)
+			},
+			rotation: endDeg,
+		})
+	})
+
 	useEffect(() => {
 		if (!wheelRef.current || timelinesCount === 0) return
 
-		const active = Math.max(
-			0,
-			timelines.findIndex((t) => t.id === activeTimeline?.id),
-		)
-		const pointRad = pointAngleFromTopRad(active)
-		const targetScreenRad = degToRad(TARGET_ANGLE)
-		const initialRotation = targetScreenRad - pointRad
-
+		const initialRotation = getTargetRotation(activeIndex)
 		logicalRadRotation.current = initialRotation
 
 		const initialDeg = radToDeg(initialRotation)
 		visualDegRotation.current = initialDeg
 		wheelRef.current.style.setProperty('--wheel-rotation', `${initialDeg}deg`)
 
-		setActiveIndex(active)
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	useEffect(() => {
-		if (!activeTimeline || timelinesCount === 0 || !wheelRef.current) return
-
-		const externalIndex = Math.max(
-			0,
-			timelines.findIndex((t) => t.id === activeTimeline.id),
-		)
-		if (externalIndex === activeIndex) return
-
-		const pointRad = pointAngleFromTopRad(externalIndex)
-		const targetScreenRad = degToRad(TARGET_ANGLE)
-		const rotationTarget = targetScreenRad - pointRad
-
-		const currentLogical = logicalRadRotation.current
-		const delta = normalizeRad(rotationTarget - currentLogical)
-		const nextRotation = currentLogical + delta
-
-		logicalRadRotation.current = nextRotation
-		setActiveIndex(externalIndex)
-
-		const startDeg = visualDegRotation.current
-		const endDeg = radToDeg(nextRotation)
-
-		const proxy = { rotation: startDeg }
-
-		gsap.killTweensOf(proxy)
-		gsap.to(proxy, {
-			duration: 0.9,
-			ease: 'power3.inOut',
-			onComplete: () => {
-				visualDegRotation.current = endDeg
-				wheelRef.current!.style.setProperty('--wheel-rotation', `${endDeg}deg`)
-			},
-			onUpdate: () => {
-				const deg = proxy.rotation
-				visualDegRotation.current = deg
-				wheelRef.current!.style.setProperty('--wheel-rotation', `${deg}deg`)
-			},
-			rotation: endDeg,
-		})
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [activeTimeline?.id])
-
-	function onSelect(index: number) {
-		if (!wheelRef.current || timelinesCount === 0) return
-
-		if (index === activeIndex) {
-			const id = timelines[index].id
-			setActiveTimelineId(id)
-			setActiveIndex(index)
+		if (
+			logicalRadRotation.current === null ||
+			visualDegRotation.current === null
+		) {
 			return
 		}
 
-		const currentLogical = logicalRadRotation.current
-		const pointRad = pointAngleFromTopRad(index)
-		const targetScreenRad = degToRad(TARGET_ANGLE)
-		const rotTarget = targetScreenRad - pointRad
-		const delta = normalizeRad(rotTarget - currentLogical)
-		const nextRotation = currentLogical + delta
+		animateToTarget(activeIndex)
+	}, [activeIndex])
 
-		logicalRadRotation.current = nextRotation
+	const handleSelect = (index: number) => {
+		if (index === activeIndex) return
 
-		const id = timelines[index].id
-		setActiveTimelineId(id)
-		setActiveIndex(index)
-
-		const startDeg = visualDegRotation.current
-		const endDeg = radToDeg(nextRotation)
-
-		const proxy = { rotation: startDeg }
-		gsap.killTweensOf(proxy)
-		gsap.to(proxy, {
-			duration: 0.9,
-			ease: 'power3.inOut',
-			onComplete: () => {
-				visualDegRotation.current = endDeg
-				if (wheelRef.current) {
-					wheelRef.current.style.setProperty('--wheel-rotation', `${endDeg}deg`)
-				}
-			},
-			onUpdate: () => {
-				const deg = proxy.rotation
-				visualDegRotation.current = deg
-				if (wheelRef.current) {
-					wheelRef.current.style.setProperty('--wheel-rotation', `${deg}deg`)
-				}
-			},
-			rotation: endDeg,
-		})
+		setActiveTimelineId(timelines[index].id)
 	}
 
 	if (timelinesCount === 0) return null
@@ -173,7 +129,7 @@ export function ThemeWheel() {
 							active={isActive}
 							index={index}
 							label={timeline.theme}
-							onSelect={() => onSelect(index)}
+							onSelect={() => handleSelect(index)}
 						/>
 					</li>
 				)
