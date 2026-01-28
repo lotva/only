@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 
-import { ReactTempus } from 'tempus/react'
-
 import { GsapRuntime } from '@/core/layout/gsap'
 import { Lenis } from '@/core/layout/lenis'
+import { ReactTempus } from '@/core/layout/tempus'
 import '@/core/styles/index.scss'
 
 export const metadata: Metadata = {
@@ -33,12 +32,12 @@ export default function RootLayout({
 			</head>
 
 			<body>
-				<ReactTempus />
 				<GsapRuntime />
 
 				{children}
 
 				<Lenis options={{}} root syncScrollTrigger />
+				<ReactTempus />
 			</body>
 		</html>
 	)
