@@ -5,9 +5,14 @@
 	grid-template-columns: 1fr 1fr;
 	column-gap: 1ch;
 
-	font-size: 10rem;
-	line-height: 8rem;
+	font-size: 4rem;
+	line-height: 5rem;
 	letter-spacing: -0.02em;
+
+	@media (width >= 768px) {
+		font-size: 10rem;
+		line-height: 8rem;
+	}
 }
 
 .from {

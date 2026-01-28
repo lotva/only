@@ -6,12 +6,14 @@
 	);
 
 	position: relative;
-
 	overflow: clip;
+	padding-block: 60px;
 
-	margin-inline: calc(-1 * var(--container-inline-padding));
-	padding-block: 170px;
-	padding-inline: var(--container-inline-padding);
+	@media (width >= 768px) {
+		margin-inline: calc(-1 * var(--container-inline-padding));
+		padding-block: 170px;
+		padding-inline: var(--container-inline-padding);
+	}
 
 	@media (width >= 1300px) {
 		box-shadow: 0 0 0 1px var(--color__border--faded);
@@ -23,5 +25,9 @@
 }
 
 .picker {
-	margin-block-start: -72px;
+	margin-block-start: 56px;
+
+	@media (width >= 768px) {
+		margin-block-start: -72px;
+	}
 }
