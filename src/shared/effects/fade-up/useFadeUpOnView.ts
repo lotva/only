@@ -5,6 +5,7 @@ import { RefObject } from 'react'
 import { fadeUpTimeline } from './fadeUp.timeline'
 
 type UseFadeUpOnViewOptions = {
+	delay?: number
 	once?: boolean
 	selector?: string
 	start?: string
@@ -13,6 +14,7 @@ type UseFadeUpOnViewOptions = {
 export function useFadeUpOnView(
 	containerRef: RefObject<HTMLElement | null>,
 	{
+		delay = 0,
 		once = true,
 		selector = '[data-animate]',
 		start = 'top 80%',
@@ -29,6 +31,8 @@ export function useFadeUpOnView(
 			if (elements.length === 0) return
 
 			const tl = fadeUpTimeline(elements)
+
+			tl.delay(delay)
 
 			ScrollTrigger.create({
 				animation: tl,

@@ -1,0 +1,9 @@
+.scroller {
+	margin-top: 58px;
+	padding-top: 20px;
+	border-top: 1px solid var(--color__border);
+
+	@media (width >= 768px) {
+		border: none;
+	}
+}

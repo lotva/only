@@ -7,7 +7,8 @@ import { useFadeUpOnView } from '@/shared/effects/fade-up/useFadeUpOnView'
 import { cn } from '@/shared/lib/cn'
 
 import { HistoryTimelineProvider, IProviderProps } from '../lib/context'
-import { TimelinePicker } from '../modules/timeline-picker/TimelinePicker'
+import { Slider } from '../modules/slider'
+import { TimelinePicker } from '../modules/timeline-picker'
 import styles from './HistoryTimeline.module.scss'
 
 interface IProps extends Omit<IProviderProps, 'children'> {
@@ -17,7 +18,7 @@ interface IProps extends Omit<IProviderProps, 'children'> {
 export function HistoryTimeline({ modifier = 'default', ...props }: IProps) {
 	const ref = useRef<HTMLDivElement>(null)
 
-	useFadeUpOnView(ref)
+	useFadeUpOnView(ref, { delay: modifier === 'alternate' ? 0.2 : 0 })
 
 	return (
 		<HistoryTimelineProvider {...props}>
@@ -31,6 +32,7 @@ export function HistoryTimeline({ modifier = 'default', ...props }: IProps) {
 				</Title>
 
 				<TimelinePicker className={styles.picker} data-animate data-delay="0" />
+				<Slider data-animate data-delay="0.3" />
 			</section>
 		</HistoryTimelineProvider>
 	)

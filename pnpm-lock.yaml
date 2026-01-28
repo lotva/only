@@ -28,6 +28,9 @@ importers:
       react-dom:
         specifier: 19.2.3
         version: 19.2.3(react@19.2.3)
+      swiper:
+        specifier: ^12.0.3
+        version: 12.0.3
       tempus:
         specifier: 1.0.0-dev.17
         version: 1.0.0-dev.17(react@19.2.3)
@@ -4144,6 +4147,13 @@ packages:
         integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==,
       }
 
+  swiper@12.0.3:
+    resolution:
+      {
+        integrity: sha512-BHd6U1VPEIksrXlyXjMmRWO0onmdNPaTAFduzqR3pgjvi7KfmUCAm/0cj49u2D7B0zNjMw02TSeXfinC1hDCXg==,
+      }
+    engines: { node: '>= 4.7.0' }
+
   table@6.9.0:
     resolution:
       {
@@ -7034,6 +7044,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   svg-tags@1.0.0: {}
+
+  swiper@12.0.3: {}
 
   table@6.9.0:
     dependencies:

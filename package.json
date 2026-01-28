@@ -23,6 +23,7 @@
 		"next": "16.1.5",
 		"react": "19.2.3",
 		"react-dom": "19.2.3",
+		"swiper": "^12.0.3",
 		"tempus": "1.0.0-dev.17"
 	},
 	"devDependencies": {
