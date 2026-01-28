@@ -1,0 +1,60 @@
+.navigator {
+	display: grid;
+	row-gap: 10px;
+	font-size: 1rem;
+
+	@media (width >= 768px) {
+		row-gap: 20px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+.controls {
+	display: flex;
+	column-gap: 8px;
+
+	@media (width >= 768px) {
+		column-gap: 20px;
+	}
+}
+
+.button {
+	--background-color--disabled: transparent;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 25px;
+	height: 25px;
+	border: 1px solid var(--color__border);
+	border-radius: 50%;
+
+	@media (width >= 768px) {
+		width: 50px;
+		height: 50px;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+	}
+}
+
+.next {
+	rotate: 180deg;
+}
+
+.icon {
+	display: none;
+}
+
+@media (width >= 768px) {
+	.icon {
+		display: block;
+	}
+
+	.smallIcon {
+		display: none;
+	}
+}

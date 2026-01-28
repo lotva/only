@@ -27,6 +27,8 @@
 
 .previous,
 .next {
+	z-index: 2;
+
 	display: none;
 
 	width: 40px;
