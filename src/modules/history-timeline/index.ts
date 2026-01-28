@@ -1,1 +1,1 @@
-export { HistoryTimeline } from './HistoryTimeline'
+export { HistoryTimeline } from './ui/HistoryTimeline'

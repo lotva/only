@@ -13,6 +13,7 @@ const eslintConfig = defineConfig([
 
 	{
 		rules: {
+			'@typescript-eslint/no-empty-object-type': 'off',
 			'unicorn/filename-case': 'off',
 			'unicorn/no-keyword-prefix': 'off',
 			'unicorn/no-null': 'off',

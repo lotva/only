@@ -1,6 +1,8 @@
 .page {
 	--page-inline-padding: clamp(20px, 5vw, 78px);
 
+	display: grid;
+	row-gap: 40vh;
 	padding-block: 170px;
 	padding-inline: var(--page-inline-padding);
 }
