@@ -1,0 +1,27 @@
+.backdrop {
+	pointer-events: none;
+
+	&::before,
+	&::after {
+		content: '';
+
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&::before {
+		width: 1px;
+		height: 200vh;
+		background-color: var(--color__border--faded);
+	}
+
+	&::after {
+		width: 100vw;
+		max-width: 1440px;
+		height: 1px;
+		background-color: var(--color__border--faded);
+	}
+}

@@ -6,7 +6,11 @@ export const TIMELINES = [
 				order: 0,
 				year: 1991,
 			},
-			{ description: 'Роман «Бессонница» — Стивен Кинг', order: 1, year: 1993 },
+			{
+				description: 'Роман «Бессонница» — Стивен Кинг',
+				order: 1,
+				year: 1993,
+			},
 			{
 				description: 'Нобелевская премия по литературе — Шеймас Хини',
 				order: 2,
@@ -29,303 +33,178 @@ export const TIMELINES = [
 				year: 1998,
 			},
 		],
-		from: 1990,
+		from: 1989,
 		id: 'timeline-1',
 		order: 0,
 		theme: 'Литература',
-		to: 2000,
+		to: 1999,
 	},
 	{
 		events: [
 			{
-				description: 'Запуск первого спутника нового поколения',
+				description: 'Запуск космического аппарата «Кассини» к Сатурну',
 				order: 0,
-				year: 2001,
+				year: 2003,
 			},
 			{
-				description: 'Нобелевская премия по физике — Джон Смит',
+				description: 'Нобелевская премия по физике — за сверхпроводимость',
 				order: 1,
-				year: 2002,
+				year: 2004,
 			},
-			{ description: 'Открытие новой частицы в CERN', order: 2, year: 2003 },
 			{
-				description: 'Разработка прототипа квантового компьютера',
-				order: 3,
+				description: 'Открытие экзопланеты земного типа',
+				order: 2,
 				year: 2005,
+			},
+			{
+				description: 'Разработка прототипа квантового компьютера Google',
+				order: 3,
+				year: 2009,
 			},
 			{
 				description: 'Публикация прорывной статьи о CRISPR',
 				order: 4,
-				year: 2007,
-			},
-			{
-				description: 'Нобелевская премия по химии — Джейн Доу',
-				order: 5,
-				year: 2009,
-			},
-			{
-				description: 'Лауреат премии Тьюринга за искусственный интеллект',
-				order: 6,
-				year: 2010,
-			},
-		],
-		from: 2000,
-		id: 'timeline-2',
-		order: 1,
-		theme: 'Наука',
-		to: 2010,
-	},
-	{
-		events: [
-			{
-				description: 'Выставка современного искусства в Лондоне',
-				order: 0,
-				year: 1980,
-			},
-			{
-				description: 'Премия за скульптуру — Элизабет Томсон',
-				order: 1,
-				year: 1982,
-			},
-			{
-				description: 'Фильм «Новый виток» — режиссер Джеймс Ли',
-				order: 2,
-				year: 1983,
-			},
-			{
-				description: 'Выставка «Нео-импрессионизм» в Париже',
-				order: 3,
-				year: 1985,
-			},
-			{
-				description: 'Аукцион рекордных картин в Нью-Йорке',
-				order: 4,
-				year: 1987,
-			},
-			{
-				description: 'Премия за архитектуру — Ричард Роджерс',
-				order: 5,
-				year: 1989,
-			},
-		],
-		from: 1980,
-		id: 'timeline-3',
-		order: 2,
-		theme: 'Искусство',
-		to: 1990,
-	},
-	{
-		events: [
-			{ description: 'Выход первого iPad', order: 0, year: 2010 },
-			{
-				description: 'Запуск Google+ как социальной сети',
-				order: 1,
 				year: 2011,
-			},
-			{ description: 'Презентация Windows 8', order: 2, year: 2012 },
-			{
-				description: 'Появление 3D-печати в массовом производстве',
-				order: 3,
-				year: 2013,
-			},
-			{ description: 'Презентация Apple Watch', order: 4, year: 2015 },
-			{
-				description: 'Запуск первого полностью автономного автомобиля',
-				order: 5,
-				year: 2018,
-			},
-			{
-				description: 'Разработка вакцины на основе мРНК',
-				order: 6,
-				year: 2020,
-			},
-		],
-		from: 2010,
-		id: 'timeline-4',
-		order: 3,
-		theme: 'Технологии',
-		to: 2020,
-	},
-]
-
-export const TIMELINES_ALTERNATIVE = [
-	{
-		events: [
-			{
-				description: 'Нобелевская премия по литературе — Дерек Уолкотт',
-				order: 0,
-				year: 1991,
-			},
-			{ description: 'Роман «Бессонница» — Стивен Кинг', order: 1, year: 1993 },
-			{
-				description: 'Нобелевская премия по литературе — Шеймас Хини',
-				order: 2,
-				year: 1994,
 			},
 			{
 				description:
-					'Роман «Гарри Поттер и философский камень» — Джоан Роулинг',
-				order: 3,
-				year: 1995,
-			},
-			{
-				description: 'Роман «Американская пастораль» — Филип Рот',
-				order: 4,
-				year: 1997,
-			},
-			{
-				description: 'Роман «Бойцовский клуб» — Чак Паланик',
+					'Нобелевская премия по химии — за разработку катализаторов',
 				order: 5,
-				year: 1998,
-			},
-		],
-		from: 1990,
-		id: 'timeline-1',
-		order: 0,
-		theme: 'Литература',
-		to: 2000,
-	},
-	{
-		events: [
-			{
-				description: 'Запуск первого спутника нового поколения',
-				order: 0,
-				year: 2001,
+				year: 2013,
 			},
 			{
-				description: 'Нобелевская премия по физике — Джон Смит',
-				order: 1,
-				year: 2002,
-			},
-			{ description: 'Открытие новой частицы в CERN', order: 2, year: 2003 },
-			{
-				description: 'Разработка прототипа квантового компьютера',
-				order: 3,
-				year: 2005,
-			},
-			{
-				description: 'Публикация прорывной статьи о CRISPR',
-				order: 4,
-				year: 2007,
-			},
-			{
-				description: 'Нобелевская премия по химии — Джейн Доу',
-				order: 5,
-				year: 2009,
-			},
-			{
-				description: 'Лауреат премии Тьюринга за искусственный интеллект',
+				description: 'Лауреат премии Тьюринга — за вклад в машинное обучение',
 				order: 6,
-				year: 2010,
+				year: 2015,
 			},
 		],
 		from: 2000,
 		id: 'timeline-2',
 		order: 1,
 		theme: 'Наука',
-		to: 2010,
+		to: 2016,
 	},
 	{
 		events: [
 			{
-				description: 'Выставка современного искусства в Лондоне',
+				description: 'Выставка «Арт-Базель» в Майами',
 				order: 0,
-				year: 1980,
+				year: 2012,
 			},
 			{
-				description: 'Премия за скульптуру — Элизабет Томсон',
+				description: 'Премия Тёрнера — Элизабет Прайс',
 				order: 1,
-				year: 1982,
-			},
-			{
-				description: 'Фильм «Новый виток» — режиссер Джеймс Ли',
-				order: 2,
-				year: 1983,
-			},
-			{
-				description: 'Выставка «Нео-импрессионизм» в Париже',
-				order: 3,
-				year: 1985,
-			},
-			{
-				description: 'Аукцион рекордных картин в Нью-Йорке',
-				order: 4,
-				year: 1987,
-			},
-			{
-				description: 'Премия за архитектуру — Ричард Роджерс',
-				order: 5,
-				year: 1989,
-			},
-		],
-		from: 1980,
-		id: 'timeline-3',
-		order: 2,
-		theme: 'Искусство',
-		to: 1990,
-	},
-	{
-		events: [
-			{ description: 'Выход первого iPad', order: 0, year: 2010 },
-			{
-				description: 'Запуск Google+ как социальной сети',
-				order: 1,
-				year: 2011,
-			},
-			{ description: 'Презентация Windows 8', order: 2, year: 2012 },
-			{
-				description: 'Появление 3D-печати в массовом производстве',
-				order: 3,
 				year: 2013,
 			},
-			{ description: 'Презентация Apple Watch', order: 4, year: 2015 },
 			{
-				description: 'Запуск первого полностью автономного автомобиля',
+				description: 'Фильм «12 лет рабства» — режиссер Стив МакКуин',
+				order: 2,
+				year: 2014,
+			},
+			{
+				description: 'Выставка «Импрессионизм» в музее Орсе',
+				order: 3,
+				year: 2015,
+			},
+			{
+				description: 'Аукцион картины Леонардо да Винчи за $450 млн',
+				order: 4,
+				year: 2017,
+			},
+			{
+				description: 'Премия Прицкера — Балкришна Доши',
 				order: 5,
 				year: 2018,
 			},
-			{
-				description: 'Разработка вакцины на основе мРНК',
-				order: 6,
-				year: 2020,
-			},
 		],
 		from: 2010,
-		id: 'timeline-4',
-		order: 3,
-		theme: 'Технологии',
-		to: 2020,
+		id: 'timeline-3',
+		order: 2,
+		theme: 'Искусство',
+		to: 2019,
 	},
 	{
 		events: [
-			{ description: 'Выход альбома «Led Zeppelin IV»', order: 0, year: 1971 },
 			{
-				description: 'Появление группы Queen на мировой сцене',
+				description: 'Выход первого iPad',
+				order: 0,
+				year: 2010,
+			},
+			{
+				description: 'Запуск социальной сети Pinterest',
 				order: 1,
-				year: 1972,
+				year: 2011,
+			},
+			{
+				description: 'Презентация Windows 10',
+				order: 2,
+				year: 2014,
+			},
+			{
+				description: 'Появление технологии VR в массовом производстве',
+				order: 3,
+				year: 2016,
+			},
+			{
+				description: 'Презентация Apple AirPods',
+				order: 4,
+				year: 2017,
+			},
+			{
+				description: 'Запуск первого электромобиля массового рынка',
+				order: 5,
+				year: 2019,
+			},
+			{
+				description: 'Разработка ИИ для распознавания белковых структур',
+				order: 6,
+				year: 2022,
+			},
+		],
+		from: 2009,
+		id: 'timeline-4',
+		order: 3,
+		theme: 'Технологии',
+		to: 2025,
+	},
+	{
+		events: [
+			{
+				description: 'Выход альбома «Led Zeppelin IV»',
+				order: 0,
+				year: 1971,
+			},
+			{
+				description: 'Появление группы Queen с альбомом «Queen II»',
+				order: 1,
+				year: 1974,
 			},
 			{
 				description: 'Выход альбома «The Dark Side of the Moon» — Pink Floyd',
 				order: 2,
-				year: 1974,
+				year: 1973,
 			},
-			{ description: 'Первый концерт Live Aid', order: 3, year: 1975 },
 			{
-				description: 'Награда Грэмми за лучший альбом — Дэвид Боуи',
+				description: 'Первый концерт Live Aid',
+				order: 3,
+				year: 1985,
+			},
+			{
+				description: 'Награда Грэмми за лучший альбом — Майкл Джексон',
 				order: 4,
-				year: 1976,
+				year: 1984,
 			},
 			{
 				description: 'Выход альбома «Night at the Opera» — Queen',
 				order: 5,
-				year: 1978,
+				year: 1975,
 			},
 		],
 		from: 1970,
 		id: 'timeline-5',
 		order: 4,
 		theme: 'Музыка',
-		to: 1980,
+		to: 1986,
 	},
 	{
 		events: [
@@ -335,13 +214,17 @@ export const TIMELINES_ALTERNATIVE = [
 				year: 1995,
 			},
 			{
-				description: 'Премия «Оскар» за лучший фильм — «Храбрость сердца»',
+				description: 'Премия «Оскар» за лучший фильм — «Английский пациент»',
 				order: 1,
 				year: 1996,
 			},
-			{ description: 'Фильм «Титаник» — Джеймс Кэмерон', order: 2, year: 1997 },
 			{
-				description: 'Выход «Скрытые желания» — Режиссёр Джон Доу',
+				description: 'Фильм «Титаник» — Джеймс Кэмерон',
+				order: 2,
+				year: 1997,
+			},
+			{
+				description: 'Выход «Спасти рядового Райана» — Стивен Спилберг',
 				order: 3,
 				year: 1998,
 			},
@@ -356,21 +239,191 @@ export const TIMELINES_ALTERNATIVE = [
 				year: 2002,
 			},
 			{
-				description: 'Выход «Авиатор» — Мартин Скорсезе',
+				description: 'Выход «Авиатора» — Мартин Скорсезе',
 				order: 6,
 				year: 2004,
 			},
 			{
 				description:
-					'Награда «Оскар» за визуальные эффекты — «Властелин колец»',
+					'Награда «Оскар» за лучшие визуальные эффекты — «Властелин колец»',
 				order: 7,
-				year: 2005,
+				year: 2003,
 			},
 		],
-		from: 1995,
+		from: 1994,
 		id: 'timeline-6',
 		order: 5,
 		theme: 'Кино',
 		to: 2005,
+	},
+]
+
+export const TIMELINES_ALTERNATE = [
+	{
+		events: [
+			{
+				description: 'Нобелевская премия по литературе — Дерек Уолкотт',
+				order: 0,
+				year: 1981,
+			},
+			{
+				description: 'Роман «Бессонница» — Стивен Кинг',
+				order: 1,
+				year: 1983,
+			},
+			{
+				description: 'Нобелевская премия по литературе — Шеймас Хини',
+				order: 2,
+				year: 1984,
+			},
+			{
+				description:
+					'Роман «Гарри Поттер и философский камень» — Джоан Роулинг',
+				order: 3,
+				year: 1985,
+			},
+			{
+				description: 'Роман «Американская пастораль» — Филип Рот',
+				order: 4,
+				year: 1987,
+			},
+			{
+				description: 'Роман «Бойцовский клуб» — Чак Паланик',
+				order: 5,
+				year: 1988,
+			},
+		],
+		from: 1978,
+		id: 'timeline-1',
+		order: 0,
+		theme: 'Литература',
+		to: 1991,
+	},
+	{
+		events: [
+			{
+				description: 'Запуск первого космического телескопа «Хаббл»',
+				order: 0,
+				year: 2008,
+			},
+			{
+				description: 'Нобелевская премия по физике — за графен',
+				order: 1,
+				year: 2009,
+			},
+			{
+				description: 'Открытие бозона Хиггса в CERN',
+				order: 2,
+				year: 2012,
+			},
+			{
+				description: 'Разработка прототипа квантового компьютера IBM',
+				order: 3,
+				year: 2016,
+			},
+			{
+				description: 'Публикация прорывной статьи о CRISPR-Cas9',
+				order: 4,
+				year: 2018,
+			},
+			{
+				description: 'Нобелевская премия по химии — за литий-ионные батареи',
+				order: 5,
+				year: 2019,
+			},
+			{
+				description: 'Лауреат премии Тьюринга за нейронные сети',
+				order: 6,
+				year: 2021,
+			},
+		],
+		from: 1999,
+		id: 'timeline-2',
+		order: 1,
+		theme: 'Наука',
+		to: 2019,
+	},
+	{
+		events: [
+			{
+				description: 'Выставка современного искусства в Тейт Модерн',
+				order: 0,
+				year: 1996,
+			},
+			{
+				description: 'Премия Тёрнера — Дэмиен Херст',
+				order: 1,
+				year: 1997,
+			},
+			{
+				description: 'Фильм «Рассекая волны» — режиссер Ларс фон Триер',
+				order: 2,
+				year: 1998,
+			},
+			{
+				description: 'Выставка «Молодые британские художники» в Лондоне',
+				order: 3,
+				year: 1999,
+			},
+			{
+				description: 'Аукцион рекордных картин Джеффа Кунса',
+				order: 4,
+				year: 2001,
+			},
+			{
+				description: 'Премия Прицкера — Заха Хадид',
+				order: 5,
+				year: 2003,
+			},
+		],
+		from: 1995,
+		id: 'timeline-3',
+		order: 2,
+		theme: 'Искусство',
+		to: 2004,
+	},
+	{
+		events: [
+			{
+				description: 'Выход первого iPhone',
+				order: 0,
+				year: 2006,
+			},
+			{
+				description: 'Запуск социальной сети Instagram',
+				order: 1,
+				year: 2009,
+			},
+			{
+				description: 'Презентация Windows 7',
+				order: 2,
+				year: 2010,
+			},
+			{
+				description: 'Появление 3D-печати для прототипирования',
+				order: 3,
+				year: 2012,
+			},
+			{
+				description: 'Презентация Apple Watch',
+				order: 4,
+				year: 2014,
+			},
+			{
+				description: 'Запуск Tesla Model S с автопилотом',
+				order: 5,
+				year: 2015,
+			},
+			{
+				description: 'Разработка вакцин на основе мРНК — BioNTech/Pfizer',
+				order: 6,
+				year: 2020,
+			},
+		],
+		from: 2005,
+		id: 'timeline-4',
+		order: 3,
+		theme: 'Технологии',
+		to: 2039,
 	},
 ]
