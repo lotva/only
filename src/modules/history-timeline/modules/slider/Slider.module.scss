@@ -1,9 +1,30 @@
+.slider {
+	display: flex;
+	flex-direction: column;
+}
+
+.navigator {
+	order: 1;
+	margin-top: 78px;
+
+	@media (width >= 768px) {
+		order: -1;
+		margin-top: -48px;
+	}
+}
+
 .scroller {
+	position: relative;
+
+	min-height: 151px;
 	margin-top: 58px;
 	padding-top: 20px;
 	border-top: 1px solid var(--color__border);
 
 	@media (width >= 768px) {
+		min-height: auto;
+		margin-top: 56px;
+		padding-top: 0;
 		border: none;
 	}
 }

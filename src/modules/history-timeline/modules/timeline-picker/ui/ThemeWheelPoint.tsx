@@ -15,6 +15,7 @@ export function ThemeWheelPoint({
 }: ThemeWheelPointProps) {
 	return (
 		<button
+			aria-current={active ? 'step' : undefined}
 			aria-pressed={active}
 			className={styles.point}
 			onClick={onSelect}
