@@ -2,33 +2,33 @@ export const TIMELINES = [
 	{
 		events: [
 			{
-				description: 'Нобелевская премия по литературе — Дерек Уолкотт',
+				description: 'Нобелевская премия по литературе — Дерек Уолкотт',
 				order: 0,
 				year: 1991,
 			},
 			{
-				description: 'Роман «Бессонница» — Стивен Кинг',
+				description: 'Роман «Бессонница» — Стивен Кинг',
 				order: 1,
 				year: 1993,
 			},
 			{
-				description: 'Нобелевская премия по литературе — Шеймас Хини',
+				description: 'Нобелевская премия по литературе — Шеймас Хини',
 				order: 2,
 				year: 1994,
 			},
 			{
 				description:
-					'Роман «Гарри Поттер и философский камень» — Джоан Роулинг',
+					'Роман «Гарри Поттер и философский камень» — Джоан Роулинг',
 				order: 3,
 				year: 1995,
 			},
 			{
-				description: 'Роман «Американская пастораль» — Филип Рот',
+				description: 'Роман «Американская пастораль» — Филип Рот',
 				order: 4,
 				year: 1997,
 			},
 			{
-				description: 'Роман «Бойцовский клуб» — Чак Паланик',
+				description: 'Роман «Бойцовский клуб» — Чак Паланик',
 				order: 5,
 				year: 1998,
 			},
@@ -42,12 +42,12 @@ export const TIMELINES = [
 	{
 		events: [
 			{
-				description: 'Запуск космического аппарата «Кассини» к Сатурну',
+				description: 'Запуск космического аппарата «Кассини» к Сатурну',
 				order: 0,
 				year: 2003,
 			},
 			{
-				description: 'Нобелевская премия по физике — за сверхпроводимость',
+				description: 'Нобелевская премия по физике — за сверхпроводимость',
 				order: 1,
 				year: 2004,
 			},
@@ -62,18 +62,18 @@ export const TIMELINES = [
 				year: 2009,
 			},
 			{
-				description: 'Публикация прорывной статьи о CRISPR',
+				description: 'Публикация прорывной статьи о CRISPR',
 				order: 4,
 				year: 2011,
 			},
 			{
 				description:
-					'Нобелевская премия по химии — за разработку катализаторов',
+					'Нобелевская премия по химии — за разработку катализаторов',
 				order: 5,
 				year: 2013,
 			},
 			{
-				description: 'Лауреат премии Тьюринга — за вклад в машинное обучение',
+				description: 'Лауреат премии Тьюринга — за вклад в машинное обучение',
 				order: 6,
 				year: 2015,
 			},
@@ -87,32 +87,32 @@ export const TIMELINES = [
 	{
 		events: [
 			{
-				description: 'Выставка «Арт-Базель» в Майами',
+				description: 'Выставка «Арт-Базель» в Майами',
 				order: 0,
 				year: 2012,
 			},
 			{
-				description: 'Премия Тёрнера — Элизабет Прайс',
+				description: 'Премия Тёрнера — Элизабет Прайс',
 				order: 1,
 				year: 2013,
 			},
 			{
-				description: 'Фильм «12 лет рабства» — режиссер Стив МакКуин',
+				description: 'Фильм «12 лет рабства» — режиссёр Стив МакКуин',
 				order: 2,
 				year: 2014,
 			},
 			{
-				description: 'Выставка «Импрессионизм» в музее Орсе',
+				description: 'Выставка «Импрессионизм» в музее Орсе',
 				order: 3,
 				year: 2015,
 			},
 			{
-				description: 'Аукцион картины Леонардо да Винчи за $450 млн',
+				description: 'Аукцион картины Леонардо да Винчи за $450 млн',
 				order: 4,
 				year: 2017,
 			},
 			{
-				description: 'Премия Прицкера — Балкришна Доши',
+				description: 'Премия Прицкера — Балкришна Доши',
 				order: 5,
 				year: 2018,
 			},
@@ -141,7 +141,7 @@ export const TIMELINES = [
 				year: 2014,
 			},
 			{
-				description: 'Появление технологии VR в массовом производстве',
+				description: 'Появление технологии VR в массовом производстве',
 				order: 3,
 				year: 2016,
 			},
@@ -156,7 +156,7 @@ export const TIMELINES = [
 				year: 2019,
 			},
 			{
-				description: 'Разработка ИИ для распознавания белковых структур',
+				description: 'Разработка ИИ для распознавания белковых структур',
 				order: 6,
 				year: 2022,
 			},
@@ -175,12 +175,12 @@ export const TIMELINES = [
 				year: 1971,
 			},
 			{
-				description: 'Появление группы Queen с альбомом «Queen II»',
+				description: 'Появление группы Queen с альбомом «Queen II»',
 				order: 1,
 				year: 1974,
 			},
 			{
-				description: 'Выход альбома «The Dark Side of the Moon» — Pink Floyd',
+				description: 'Выход альбома «The Dark Side of the Moon» — Pink Floyd',
 				order: 2,
 				year: 1973,
 			},
@@ -190,12 +190,12 @@ export const TIMELINES = [
 				year: 1985,
 			},
 			{
-				description: 'Награда Грэмми за лучший альбом — Майкл Джексон',
+				description: 'Награда Грэмми за лучший альбом — Майкл Джексон',
 				order: 4,
 				year: 1984,
 			},
 			{
-				description: 'Выход альбома «Night at the Opera» — Queen',
+				description: 'Выход альбома «Night at the Opera» — Queen',
 				order: 5,
 				year: 1975,
 			},
@@ -209,27 +209,27 @@ export const TIMELINES = [
 	{
 		events: [
 			{
-				description: 'Выход фильма «Семь» — Дэвид Финчер',
+				description: 'Выход фильма «Семь» — Дэвид Финчер',
 				order: 0,
 				year: 1995,
 			},
 			{
-				description: 'Премия «Оскар» за лучший фильм — «Английский пациент»',
+				description: 'Премия «Оскар» за лучший фильм — «Английский пациент»',
 				order: 1,
 				year: 1996,
 			},
 			{
-				description: 'Фильм «Титаник» — Джеймс Кэмерон',
+				description: 'Фильм «Титаник» — Джеймс Кэмерон',
 				order: 2,
 				year: 1997,
 			},
 			{
-				description: 'Выход «Спасти рядового Райана» — Стивен Спилберг',
+				description: 'Выход «Спасти рядового Райана» — Стивен Спилберг',
 				order: 3,
 				year: 1998,
 			},
 			{
-				description: 'Премьера «Гладиатора» — Ридли Скотт',
+				description: 'Премьера «Гладиатора» — Ридли Скотт',
 				order: 4,
 				year: 2000,
 			},
@@ -239,13 +239,13 @@ export const TIMELINES = [
 				year: 2002,
 			},
 			{
-				description: 'Выход «Авиатора» — Мартин Скорсезе',
+				description: 'Выход «Авиатора» — Мартин Скорсезе',
 				order: 6,
 				year: 2004,
 			},
 			{
 				description:
-					'Награда «Оскар» за лучшие визуальные эффекты — «Властелин колец»',
+					'Награда «Оскар» за лучшие визуальные эффекты — «Властелин колец»',
 				order: 7,
 				year: 2003,
 			},
@@ -262,33 +262,33 @@ export const TIMELINES_ALTERNATE = [
 	{
 		events: [
 			{
-				description: 'Нобелевская премия по литературе — Дерек Уолкотт',
+				description: 'Нобелевская премия по литературе — Дерек Уолкотт',
 				order: 0,
 				year: 1981,
 			},
 			{
-				description: 'Роман «Бессонница» — Стивен Кинг',
+				description: 'Роман «Бессонница» — Стивен Кинг',
 				order: 1,
 				year: 1983,
 			},
 			{
-				description: 'Нобелевская премия по литературе — Шеймас Хини',
+				description: 'Нобелевская премия по литературе — Шеймас Хини',
 				order: 2,
 				year: 1984,
 			},
 			{
 				description:
-					'Роман «Гарри Поттер и философский камень» — Джоан Роулинг',
+					'Роман «Гарри Поттер и философский камень» — Джоан Роулинг',
 				order: 3,
 				year: 1985,
 			},
 			{
-				description: 'Роман «Американская пастораль» — Филип Рот',
+				description: 'Роман «Американская пастораль» — Филип Рот',
 				order: 4,
 				year: 1987,
 			},
 			{
-				description: 'Роман «Бойцовский клуб» — Чак Паланик',
+				description: 'Роман «Бойцовский клуб» — Чак Паланик',
 				order: 5,
 				year: 1988,
 			},
@@ -307,12 +307,12 @@ export const TIMELINES_ALTERNATE = [
 				year: 2008,
 			},
 			{
-				description: 'Нобелевская премия по физике — за графен',
+				description: 'Нобелевская премия по физике — за графен',
 				order: 1,
 				year: 2009,
 			},
 			{
-				description: 'Открытие бозона Хиггса в CERN',
+				description: 'Открытие бозона Хиггса в CERN',
 				order: 2,
 				year: 2012,
 			},
@@ -322,17 +322,17 @@ export const TIMELINES_ALTERNATE = [
 				year: 2016,
 			},
 			{
-				description: 'Публикация прорывной статьи о CRISPR-Cas9',
+				description: 'Публикация прорывной статьи о CRISPR-Cas9',
 				order: 4,
 				year: 2018,
 			},
 			{
-				description: 'Нобелевская премия по химии — за литий-ионные батареи',
+				description: 'Нобелевская премия по химии — за литий-ионные батареи',
 				order: 5,
 				year: 2019,
 			},
 			{
-				description: 'Лауреат премии Тьюринга за нейронные сети',
+				description: 'Лауреат премии Тьюринга за нейронные сети',
 				order: 6,
 				year: 2021,
 			},
@@ -346,22 +346,22 @@ export const TIMELINES_ALTERNATE = [
 	{
 		events: [
 			{
-				description: 'Выставка современного искусства в Тейт Модерн',
+				description: 'Выставка современного искусства в Тейт Модерн',
 				order: 0,
 				year: 1996,
 			},
 			{
-				description: 'Премия Тёрнера — Дэмиен Херст',
+				description: 'Премия Тёрнера — Дэмиен Херст',
 				order: 1,
 				year: 1997,
 			},
 			{
-				description: 'Фильм «Рассекая волны» — режиссер Ларс фон Триер',
+				description: 'Фильм «Рассекая волны» — режиссёр Ларс фон Триер',
 				order: 2,
 				year: 1998,
 			},
 			{
-				description: 'Выставка «Молодые британские художники» в Лондоне',
+				description: 'Выставка «Молодые британские художники» в Лондоне',
 				order: 3,
 				year: 1999,
 			},
@@ -371,7 +371,7 @@ export const TIMELINES_ALTERNATE = [
 				year: 2001,
 			},
 			{
-				description: 'Премия Прицкера — Заха Хадид',
+				description: 'Премия Прицкера — Заха Хадид',
 				order: 5,
 				year: 2003,
 			},
@@ -400,7 +400,7 @@ export const TIMELINES_ALTERNATE = [
 				year: 2010,
 			},
 			{
-				description: 'Появление 3D-печати для прототипирования',
+				description: 'Появление 3D-печати для прототипирования',
 				order: 3,
 				year: 2012,
 			},
@@ -410,12 +410,12 @@ export const TIMELINES_ALTERNATE = [
 				year: 2014,
 			},
 			{
-				description: 'Запуск Tesla Model S с автопилотом',
+				description: 'Запуск Tesla Model S с автопилотом',
 				order: 5,
 				year: 2015,
 			},
 			{
-				description: 'Разработка вакцин на основе мРНК — BioNTech/Pfizer',
+				description: 'Разработка вакцин на основе мРНК — BioNTech/Pfizer',
 				order: 6,
 				year: 2020,
 			},
