@@ -18,7 +18,7 @@ interface IProps extends Omit<IProviderProps, 'children'> {
 export function HistoryTimeline({ modifier = 'default', ...props }: IProps) {
 	const ref = useRef<HTMLDivElement>(null)
 
-	useFadeUpOnView(ref, { delay: modifier === 'alternate' ? 0.2 : 0 })
+	useFadeUpOnView(ref, { delay: 0.2 })
 
 	return (
 		<HistoryTimelineProvider {...props}>

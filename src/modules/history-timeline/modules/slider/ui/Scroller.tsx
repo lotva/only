@@ -23,7 +23,7 @@ export function Scroller({ className }: { className?: string }) {
 
 	const [displayedId, setDisplayedId] = useState(() => activeTimeline.id)
 
-	const requestedIdRef = useRef<string>(activeTimeline.id)
+	const requestedIdRef = useRef(activeTimeline.id)
 	const animatingRef = useRef(false)
 
 	const displayedTimeline =
@@ -93,9 +93,14 @@ export function Scroller({ className }: { className?: string }) {
 				}}
 				slidesPerView="auto"
 				spaceBetween={isDesktop ? 80 : 20}
+				wrapperTag="ul"
 			>
 				{displayedTimeline.events.map((event) => (
-					<SwiperSlide className={styles.slide} key={event.description}>
+					<SwiperSlide
+						className={styles.slide}
+						key={event.description}
+						tag="li"
+					>
 						<article className={styles.article}>
 							<h3 className={styles.title}>{event.year}</h3>
 							<p className={styles.description}>{event.description}</p>

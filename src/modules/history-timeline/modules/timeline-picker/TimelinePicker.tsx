@@ -6,7 +6,7 @@ import { cn } from '@/shared/lib/cn'
 
 import styles from './TimelinePicker.module.scss'
 import { Backdrop } from './ui/Backdrop'
-import { ThemeWheel } from './ui/ThemeWheel'
+import { Wheel } from './ui/Wheel'
 import { Years } from './ui/Years'
 
 export function TimelinePicker({
@@ -16,7 +16,7 @@ export function TimelinePicker({
 	return (
 		<div {...props} className={cn(styles.root, className)}>
 			<Backdrop />
-			<ThemeWheel />
+			<Wheel />
 			<Years />
 		</div>
 	)

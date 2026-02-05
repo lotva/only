@@ -1,21 +1,17 @@
-import styles from './ThemeWheelPoint.module.scss'
+import styles from './WheelPoint.module.scss'
 
-export interface ThemeWheelPointProps {
+export interface IProps {
 	active?: boolean
 	index: number
 	label: string
 	onSelect?: () => void
 }
 
-export function ThemeWheelPoint({
-	active = false,
-	index,
-	label,
-	onSelect,
-}: ThemeWheelPointProps) {
+export function WheelPoint({ active = false, index, label, onSelect }: IProps) {
 	return (
 		<button
 			aria-current={active ? 'step' : undefined}
+			aria-label={`Переключиться на тему: ${label}`}
 			aria-pressed={active}
 			className={styles.point}
 			onClick={onSelect}

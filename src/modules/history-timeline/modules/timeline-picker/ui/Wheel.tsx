@@ -1,19 +1,19 @@
 'use client'
 
 import gsap from 'gsap'
-import { useEffect, useEffectEvent, useMemo, useRef } from 'react'
+import { useEffect, useEffectEvent, useRef } from 'react'
 
 import { useHistoryTimeline } from '@/modules/history-timeline/lib/context'
 
 import { degToRad, normalizeRad, radToDeg } from '../lib'
-import styles from './ThemeWheel.module.scss'
-import { ThemeWheelPoint } from './ThemeWheelPoint'
+import styles from './Wheel.module.scss'
+import { WheelPoint } from './WheelPoint'
 
 const TARGET_ANGLE = 30
 const ANIMATION_DURATION = 0.9
 const ANIMATION_EASE = 'power3.inOut'
 
-export function ThemeWheel() {
+export function Wheel() {
 	const { activeTimeline, setActiveTimelineId, timelines } =
 		useHistoryTimeline()
 	const timelinesCount = timelines.length
@@ -27,15 +27,10 @@ export function ThemeWheel() {
 		timelines.findIndex((t) => t.id === activeTimeline?.id),
 	)
 
-	const pointAnglesDeg = useMemo(() => {
-		if (timelinesCount === 0) return []
-		const first = 30
-		const step = 360 / timelinesCount
-
-		return Array.from({ length: timelinesCount }).map(
-			(_, index) => (first + index * step) % 360,
-		)
-	}, [timelinesCount])
+	const pointAnglesDeg = Array.from(
+		{ length: timelinesCount },
+		(_, index) => (30 + index * (360 / timelinesCount)) % 360,
+	)
 
 	const pointAngleFromTopRad = (index: number) =>
 		degToRad(pointAnglesDeg[index % pointAnglesDeg.length] ?? 0)
@@ -125,7 +120,7 @@ export function ThemeWheel() {
 							rotate: `${angle}deg`,
 						}}
 					>
-						<ThemeWheelPoint
+						<WheelPoint
 							active={isActive}
 							index={index}
 							label={timeline.theme}
